@@ -46,6 +46,7 @@ test:
     - anaconda -h
     - anaconda -V
     - python -c "from anaconda_cli_base import __version__; assert __version__ == \"{{ version }}\""
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - pytest -v tests
 
 about:
