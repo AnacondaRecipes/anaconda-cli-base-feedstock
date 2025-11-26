@@ -31,7 +31,10 @@ requirements:
     - pydantic-settings >=2.3
     - readchar
     - rich
-    - typer
+    # conda-build can install typer <0.6.0, but it's not compatible with anaconda-cli-base:
+    # TypeError: Typer.__init__() got an unexpected keyword argument 'pretty_exceptions_enable'
+    # pretty_exceptions_enable was added in typer 0.6.0, see https://github.com/fastapi/typer/commit/c750f8206e75af3ee963b1d6bc9b9a887be7f4f7
+    - typer >=0.6.0
     - tomli
     - packaging >=23.0
   run_constrained:
