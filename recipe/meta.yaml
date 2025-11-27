@@ -28,7 +28,8 @@ requirements:
   run:
     - python
     - click <8.2
-    - pydantic-settings >=2.3
+    - pydantic-settings >=2.3 # [py<314]
+    - pydantic-settings >=2.12.0 # [py==314]
     - readchar
     - rich
     - typer
