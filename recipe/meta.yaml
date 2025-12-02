@@ -35,7 +35,7 @@ requirements:
     - pydantic-settings >=2.3
     - readchar
     - rich
-    - typer
+    - typer >=0.17
     - tomli
     - packaging >=23.0
   run_constrained:
