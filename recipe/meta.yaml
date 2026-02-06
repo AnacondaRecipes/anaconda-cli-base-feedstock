@@ -60,7 +60,7 @@ test:
     - pytest -v tests
 
 about:
-  home: https://anaconda.cloud
+  home: https://www.anaconda.com
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
