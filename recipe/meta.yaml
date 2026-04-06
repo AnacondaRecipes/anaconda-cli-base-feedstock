@@ -1,5 +1,5 @@
 {% set name = "anaconda-cli-base" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: f9a3f004a6890251ed9ab9ed35415e752c5ca68add699cd2a86ce79dd2df4c64
+  sha256: 2b7f04cbc19af3d70875411d2020832a0264d21a0575f91ed66b6401b2390063
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - python
     - click
     - pydantic-settings >=2.3
+    - pydantic >=2.12
     - readchar
     - rich
     - typer >=0.17
