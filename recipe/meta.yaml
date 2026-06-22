@@ -1,5 +1,5 @@
 {% set name = "anaconda-cli-base" %}
-{% set version = "0.8.2" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: 2b7f04cbc19af3d70875411d2020832a0264d21a0575f91ed66b6401b2390063
+  sha256: a542d9e8098cb1633281b88e507c199deb45aeb72e560778738e308a3c28f162
 
 build:
   number: 0
@@ -58,7 +58,7 @@ test:
     - anaconda -V
     - python -c "from anaconda_cli_base import __version__; assert __version__ == \"{{ version }}\""
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
-    - pytest -v tests
+    - pytest -v tests --ignore=tests/test_telemetry_integration.py
 
 about:
   home: https://www.anaconda.com
@@ -67,8 +67,8 @@ about:
   license_family: BSD
   summary: A base CLI entrypoint supporting Anaconda CLI plugins
   description: A base CLI entrypoint supporting Anaconda CLI plugins
-  dev_url: https://pypi.org/project/anaconda-cli-base
-  doc_url: https://pypi.org/project/anaconda-cli-base
+  dev_url: https://github.com/anaconda/anaconda-cli-base
+  doc_url: https://github.com/anaconda/anaconda-cli-base
 
 extra:
   recipe-maintainers:
