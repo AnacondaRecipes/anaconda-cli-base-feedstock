@@ -67,8 +67,8 @@ about:
   license_family: BSD
   summary: A base CLI entrypoint supporting Anaconda CLI plugins
   description: A base CLI entrypoint supporting Anaconda CLI plugins
-  dev_url: https://pypi.org/project/anaconda-cli-base
-  doc_url: https://pypi.org/project/anaconda-cli-base
+  dev_url: https://github.com/anaconda/anaconda-cli-base
+  doc_url: https://github.com/anaconda/anaconda-cli-base
 
 extra:
   recipe-maintainers:
